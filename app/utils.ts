@@ -2,7 +2,7 @@ export function createExcerpt({ text, length = 150 }: { text: string; length?: n
   return text.split('', length).concat(['...']).join('');
 }
 
-export async function getContent({ context, prefix }): Promise<{ slug: string; title: string }[]> {
+export function getContent({ context, prefix }): Promise<{ slug: string; title: string }[]> {
   const slugs: string[] = [];
   const content: { slug: string; title: string; featuredImage: string }[] = [];
 
